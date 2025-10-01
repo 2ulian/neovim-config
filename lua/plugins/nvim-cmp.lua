@@ -26,7 +26,7 @@ return {
 		-- Setup vim-dadbod
 		cmp.setup.filetype({ "sql" }, {
 			sources = {
-      { name = "vim-dadbod-completion" },
+				{ name = "vim-dadbod-completion" },
 				{ name = "buffer" },
 			},
 		})
@@ -60,6 +60,7 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
+				["<Tab>"] = cmp.mapping.confirm({ select = true }),
 			}),
 
 			sources = {

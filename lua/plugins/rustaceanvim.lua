@@ -31,10 +31,17 @@ local config = function()
 		},
 		server = {
 			on_attach = on_attach,
+			capabilities = require("cmp_nvim_lsp").default_capabilities(),
 			settings = {
 				["rust-analyzer"] = {
-					cargo = {
-						allFeatures = true,
+					cargo = { allFeatures = true },
+					completion = {
+						autoimport = { enable = true },
+						autoself = { enable = true },
+						autoAwait = { enable = true },
+						autoIter = { enable = true },
+						callable = { snippets = "fill_arguments" },
+						-- fullFunctionSignatures = { enable = true },
 					},
 				},
 			},
